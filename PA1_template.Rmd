@@ -2,9 +2,8 @@
 title: "Assignment 1 Reproducible Research"
 author: "Martin Hochheim"
 date: "6. Februar 2016"
-output: 
-  html_document: 
-    self_contained: no
+output: md_document
+  
 ---
 
 Loading and preprocessing the data
