@@ -2,9 +2,7 @@
 title: "Assignment 1 Reproducible Research"
 author: "Martin Hochheim"
 date: "6. Februar 2016"
-output: 
-  html_document: 
-    self_contained: no
+output: html_document
 ---
 
 Loading and preprocessing the data
@@ -15,8 +13,8 @@ Load the data (i.e. 𝚛𝚎𝚊𝚍.𝚌𝚜𝚟())
 Process/transform the data (if necessary) into a format suitable for your analysis
 
 ```{r}
-#load packages 
-
+#install packages 
+install.packages("graphics")
 library (graphics)
 
 #Read Csv
@@ -63,7 +61,7 @@ head(aggsteps)
 
 #Prepare Histogramm
 class(aggsteps$Group.1)
-aggsteps$date = as.Date(aggsteps$date) 
+aggsteps$Group.1 = as.Date(aggsteps$Group.1) 
 
 head(aggsteps)
 
@@ -121,7 +119,7 @@ The values differ from the analysis before. The median and the mean are now high
 are now estimated higher than before. 
 
 ```{r}
-
+install.packages("mice")
 library("mice")
 #Find out the different imputation methods
 methods(mice)
